@@ -22,15 +22,15 @@ public class Menu {
 
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Lister tout les joueurs       : 1 ");
-        System.out.println("Compte des joueurs par equipe : 2 ");
-        System.out.println("Compte des joueurs par poste  : 3 ");
-        System.out.println("Ajouter une equipe            : 4 ");
-        System.out.println("Ajouter un joueur             : 5 ");
-        System.out.println("Changer ou ajouter a l'equipe : 6 ");
-        System.out.println("Passer une nuit               : 7 ");
-        System.out.println("Entrainement                  : 8 ");
-        System.out.println("Match du jour                 : 9 ");
+        System.out.println(" Lister tout les joueurs       : 1 ");
+        System.out.println(" Compte des joueurs par equipe : 2 ");
+        System.out.println(" Compte des joueurs par poste  : 3 ");
+        System.out.println(" Ajouter une equipe            : 4 ");
+        System.out.println(" Ajouter un joueur             : 5 ");
+        System.out.println(" Changer ou ajouter a l'equipe : 6 ");
+        System.out.println(" Passer une nuit               : 7 ");
+        System.out.println(" Entrainement                  : 8 ");
+        System.out.println(" Match du jour                 : 9 ");
         String valeur = scanner.nextLine();
 
         switch (valeur) {
