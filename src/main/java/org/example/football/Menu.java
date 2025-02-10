@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-    private Ligue ligue;
+    private final Ligue ligue;
     Scanner scanf = new Scanner(System.in);
 
     public Menu(Ligue ligue) {
@@ -39,7 +39,7 @@ public class Menu {
                 for (Equipe equipe : ligue.getEquipes()) {
                     equipe.afficheJoueur();
                 }
-                for (Joueur joueur : ligue.getJoueursLibre()){
+                for (Joueur _ : ligue.getJoueursLibre()){
                     ligue.afficheJoueur();
                 }
                 break;
@@ -154,8 +154,7 @@ public class Menu {
     private String choixJou() {
         Scanner scanf = new Scanner(System.in);
         System.out.println("Entrer le poste du joueur : (Gardien,Defenseur,Milieux,Attaquant");
-        String jou = scanf.next();
-        return jou;
+        return scanf.next();
     }
     private int gardien() {
         System.out.println("Entrer la note des reflexe : (0,100)");

@@ -36,7 +36,7 @@ public class Joueur {
     }
 
     public void setEquipe(String equipe) {
-        this.nom = nom;
+        this.nom = equipe;
     }
 
     public int getAge() {
@@ -119,12 +119,6 @@ public class Joueur {
                 ", total=" + total +
                 '}';
     }
-    public void ajoutJoueur(){
 
-    }
-
-    public Object getNom2(Joueur t) {
-        return nom ;
-    }
 }
 
