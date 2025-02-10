@@ -22,7 +22,7 @@ public class Gardiens extends Joueur{
     }
     public void setReflexe(int reflexe) {
 
-        this.reflexe = this.reflexe;
+        this.reflexe = reflexe;
     }
 
     @Override
