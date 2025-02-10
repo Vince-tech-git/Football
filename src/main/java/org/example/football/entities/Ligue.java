@@ -4,6 +4,7 @@ import org.example.football.Equipe;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Ligue {
 
@@ -44,10 +45,12 @@ public class Ligue {
     }
 
     public void afficheJoueur() {
-        for (Joueur joueur : joueursLibre) {
+        /*for (Joueur joueur : joueursLibre) {
             System.out.println(joueur.getNom());
 
-        }
+
+        }*/
+        joueursLibre.forEach(joueur -> System.out.println(joueur.getNom()));
     }
 
     public Equipe getUneEquipe(String nom) {
@@ -85,6 +88,27 @@ public class Ligue {
                 equipe.getJoueurs().add(joueur);
                 return;
             }
+        }
+    }
+    public void nuit (Equipe equipe){
+        equipe.regen(equipe);
+        System.out.println("zzzzzz");
+    }
+    public void entrainement(Equipe e){
+        e.entrainement(e);
+        System.out.println("++++++");
+
+    }
+    public void match(Equipe equipe1, Equipe equipe2){
+        Random random = new Random();
+        int nb1;
+        int nb2;
+        nb1= random.nextInt(0,50);
+        nb2= random.nextInt(0,100);
+        if (nb1 >= nb2) {
+        System.out.println("L'equipe 2 a gagner "+equipe2.getNomEquipe()+ equipe2.getJoueurs());
+        } else {
+            System.out.println("L'equipe 1 a gagner "+equipe1.getNomEquipe()+equipe1.getJoueurs());
         }
     }
 }

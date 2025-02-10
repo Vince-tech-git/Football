@@ -1,7 +1,6 @@
 package org.example.football;
 
-import org.example.football.entities.Joueur;
-import org.example.football.entities.Ligue;
+import org.example.football.entities.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,5 +62,69 @@ public class Equipe {
                     att + " attaquant ");
     }
 
+    public void regen(Equipe equipe){
+        for(Joueur joueur : joueurs) {
 
+            System.out.println("nuit");
+            String lui = joueur.getNom();
+            int endu = joueur.getEndurance();
+            System.out.println(lui+endu);
+            if( endu <= 95 ) {
+                endu = endu + 4;
+                joueur.setEndurance(endu);
+            }
+            System.out.println(lui+endu);
+        }
+    }
+
+    public void entrainement(Equipe equipe) {
+        for(Joueur joueur : joueurs) {
+            System.out.println("entrainement");
+            String lui = joueur.getNom();
+            int endu = joueur.getEndurance();
+            System.out.println(lui+endu);
+            if (endu >= 5) {
+                endu = endu - 4;
+                joueur.setEndurance(endu);
+                System.out.println(lui + endu);
+            }else{
+                System.out.println("pas d'entrainement trop fatiguer");
+            }
+            if (joueur instanceof Gardiens g){
+                int reflexe = g.getReflexe();
+                if (reflexe <= 95){
+                    reflexe = reflexe+5;
+                    g.setReflexe(reflexe);
+                    System.out.println("Reflexe+5");
+                }
+            }
+            if (joueur instanceof Defenseur d){
+                int tacle = d.getTacle();
+                if (tacle <= 95){
+                    tacle = tacle+5;
+                    d.setTacle(tacle);
+                    System.out.println("Tacle+5");
+                }
+            }
+            if (joueur instanceof Milieux m){
+                int passe = m.getPasse();
+                if (passe <= 95){
+                    passe = passe+5;
+                    m.setPasse(passe);
+                    System.out.println("Passe+5");
+                }
+            }
+            if (joueur instanceof Attaquant a){
+                int tir = a.getTir();
+                if (tir <= 95){
+                    tir = tir+5;
+                    a.setTir(tir);
+                    System.out.println("Tir+5");
+                }
+            }
+
+
+
+        }
+    }
 }

@@ -20,8 +20,8 @@ public class Defenseur extends Joueur {
         return tacle;
     }
 
-    public void setTacle() {
-        this.tacle = tacle;
+    public void setTacle(int tacle) {
+        this.tacle = this.tacle;
     }
 
     @Override

@@ -20,7 +20,6 @@ public class Gardiens extends Joueur{
     public int getReflexe() {
         return reflexe;
     }
-
     public void setReflexe(int reflexe) {
 
         this.reflexe = this.reflexe;

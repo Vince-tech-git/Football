@@ -69,14 +69,23 @@ public class Menu {
                 System.out.println("choix du joueur : ");
                 String joueurm = encodeNom();
                 ligue.recruter(result,joueurm);
+                break;
             case "7":
-                // nuit();
+                for(Equipe e :ligue.getEquipes()){
+                    ligue.nuit(e);
+                }
+
                 break;
             case "8":
-                //  entrainement();
+                for(Equipe e :ligue.getEquipes()){
+                    ligue.entrainement(e);
+                }
                 break;
             case "9":
-                //match();
+
+
+                ligue.match(ligue.getUneEquipe("Arsenal"),ligue.getUneEquipe("City"));
+
                 break;
             default:
                 break;
